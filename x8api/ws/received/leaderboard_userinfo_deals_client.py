@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def leaderboard_userinfo_deals_client(api, message):
     if message["name"] == "leaderboard-userinfo-deals-client":

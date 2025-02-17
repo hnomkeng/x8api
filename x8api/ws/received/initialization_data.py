@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def initialization_data(api, message):
     if message["name"] == "initialization-data":

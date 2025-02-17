@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def history_positions(api, message):
     if message["name"] == "history-positions":

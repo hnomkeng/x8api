@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def technical_indicators(api, message, api_dict_clean):
     if message["name"] == "technical-indicators":

@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 import x8api.global_value as global_value
 
 def profile(api, message):

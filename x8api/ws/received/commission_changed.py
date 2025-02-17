@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 import x8api.constants as OP_code
 
 def commission_changed(api, message):

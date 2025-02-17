@@ -1,27 +1,27 @@
-"""Module for IQ Option http sms resource."""
+"""Module for X8 option http sms resource."""
 
 from x8api.http.resource import Resource
 import json
 
 
 class SMS_Sender(Resource):
-    """Class for IQ option sms resource."""
+    """Class for X8 option sms resource."""
     # pylint: disable=too-few-public-methods
 
     url = ""
 
     def _post(self, data=None, headers=None):
-        """Send get request for IQ Option API sms http resource.
+        """Send get request for X8 option API sms http resource.
 
         :returns: The instance of :class:`requests.Response`.
         """
         return self.api.send_http_request_v2(method="POST", url="https://auth.8xtrade.com/api/v2/verify/2fa",data=json.dumps(data), headers=headers)
 
     def __call__(self, token_reason):
-        """Method to get IQ Option API sms http request.
+        """Method to get X8 option API sms http request.
 
-        :param str method: The method of a IQ Option server 2FA.
-        :param str token_reason: The token of a IQ Option server 2FA.
+        :param str method: The method of a X8 option server 2FA.
+        :param str token_reason: The token of a X8 option server 2FA.
 
         :returns: The instance of :class:`requests.Response`.
         """

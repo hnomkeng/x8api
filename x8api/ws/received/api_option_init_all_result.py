@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def api_option_init_all_result(api, message):
     if message["name"] == "api_option_init_all_result":

@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def tpsl_changed(api, message):
     if message["name"] == "tpsl-changed":

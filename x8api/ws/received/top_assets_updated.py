@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def top_assets_updated(api, message):
     if message["name"] == "top-assets-updated":

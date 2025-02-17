@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def socket_option_opened(api, message):
     if message["name"] == "socket-option-opened":

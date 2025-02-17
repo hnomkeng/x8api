@@ -1,10 +1,10 @@
-"""Module for IQ option candles websocket chanel."""
+"""Module for X8 option candles websocket chanel."""
 
 from x8api.ws.chanels.base import Base
 import time
 
 class GetCandles(Base):
-    """Class for IQ option candles websocket chanel."""
+    """Class for X8 option candles websocket chanel."""
     # pylint: disable=too-few-public-methods
 
     name = "sendMessage"

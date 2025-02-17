@@ -1,4 +1,4 @@
-"""Module for IQ option unsubscribe websocket chanel."""
+"""Module for X8 option unsubscribe websocket chanel."""
 
 from x8api.ws.chanels.base import Base
 import datetime
@@ -6,7 +6,7 @@ import x8api.constants as OP_code
 
 
 class Unsubscribe(Base):
-    """Class for IQ option candles websocket chanel."""
+    """Class for X8 option candles websocket chanel."""
     # pylint: disable=too-few-public-methods
 
     name = "unsubscribeMessage"
@@ -26,7 +26,7 @@ class Unsubscribe(Base):
 
 
 class Unsubscribe_candles(Base):
-    """Class for IQ option candles websocket chanel."""
+    """Class for X8 option candles websocket chanel."""
     # pylint: disable=too-few-public-methods
 
     name = "unsubscribeMessage"

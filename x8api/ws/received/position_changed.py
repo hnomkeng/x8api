@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def position_changed(api, message):
     if message["name"] == "position-changed":

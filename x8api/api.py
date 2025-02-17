@@ -1,4 +1,4 @@
-"""Module for IQ Option API."""
+"""Module for X8 option API."""
 
 import time
 import json
@@ -84,7 +84,7 @@ requests.packages.urllib3.disable_warnings()  # pylint: disable=no-member
 
 
 class x8api(object):  # pylint: disable=too-many-instance-attributes
-    """Class for communication with IQ Option API."""
+    """Class for communication with X8 option API."""
 
     # pylint: disable=too-many-public-methods
     socket_option_opened = {}
@@ -156,9 +156,9 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     def __init__(self, host, username, password, proxies=None):
         """
-        :param str host: The hostname or ip address of a IQ Option server.
-        :param str username: The username of a IQ Option server.
-        :param str password: The password of a IQ Option server.
+        :param str host: The hostname or ip address of a X8 option server.
+        :param str username: The username of a X8 option server.
+        :param str password: The password of a X8 option server.
         :param dict proxies: (optional) The http request proxies.
         """
         self.https_url = "https://{host}/api".format(host=host)
@@ -185,12 +185,12 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
         :param resource: The instance of
             :class:`Resource <x8api.http.resource.Resource>`.
 
-        :returns: The full url to IQ Option http resource.
+        :returns: The full url to X8 option http resource.
         """
         return "/".join((self.https_url, resource.url))
 
     def send_http_request(self, resource, method, data=None, params=None, headers=None):  # pylint: disable=too-many-arguments
-        """Send http request to IQ Option server.
+        """Send http request to X8 option server.
 
         :param resource: The instance of
             :class:`Resource <x8api.http.resource.Resource>`.
@@ -221,7 +221,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
         return response
 
     def send_http_request_v2(self, url, method, data=None, params=None, headers=None):  # pylint: disable=too-many-arguments
-        """Send http request to IQ Option server.
+        """Send http request to X8 option server.
 
         :param resource: The instance of
             :class:`Resource <x8api.http.resource.Resource>`.
@@ -260,7 +260,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
         return self.websocket_client.wss
 
     def send_websocket_request(self, name, msg, request_id="", no_force_send=True):
-        """Send websocket request to IQ Option server.
+        """Send websocket request to X8 option server.
 
         :param str name: The websocket request name.
         :param dict msg: The websocket request msg.
@@ -280,7 +280,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def logout(self):
-        """Property for get IQ Option http login resource.
+        """Property for get X8 option http login resource.
 
         :returns: The instance of :class:`Login
             <x8api.http.login.Login>`.
@@ -289,7 +289,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def login(self):
-        """Property for get IQ Option http login resource.
+        """Property for get X8 option http login resource.
 
         :returns: The instance of :class:`Login
             <x8api.http.login.Login>`.
@@ -298,7 +298,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def login_2fa(self):
-        """Property for get IQ Option http login 2FA resource.
+        """Property for get X8 option http login 2FA resource.
 
         :returns: The instance of :class:`Login2FA
             <x8api.http.login2fa.Login2FA>`.
@@ -307,7 +307,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def send_sms_code(self):
-        """Property for get IQ Option http send sms code resource.
+        """Property for get X8 option http send sms code resource.
 
         :returns: The instance of :class:`SMS_Sender
             <x8api.http.send_sms.SMS_Sender>`.
@@ -316,7 +316,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def verify_2fa(self):
-        """Property for get IQ Option http verify 2fa resource.
+        """Property for get X8 option http verify 2fa resource.
 
         :returns: The instance of :class:`Verify
             <x8api.http.verify.Verify>`.
@@ -325,7 +325,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def loginv2(self):
-        """Property for get IQ Option http loginv2 resource.
+        """Property for get X8 option http loginv2 resource.
 
         :returns: The instance of :class:`Loginv2
             <x8api.http.loginv2.Loginv2>`.
@@ -334,7 +334,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def auth(self):
-        """Property for get IQ Option http auth resource.
+        """Property for get X8 option http auth resource.
 
         :returns: The instance of :class:`Auth
             <x8api.http.auth.Auth>`.
@@ -343,7 +343,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def appinit(self):
-        """Property for get IQ Option http appinit resource.
+        """Property for get X8 option http appinit resource.
 
         :returns: The instance of :class:`Appinit
             <x8api.http.appinit.Appinit>`.
@@ -352,7 +352,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def token(self):
-        """Property for get IQ Option http token resource.
+        """Property for get X8 option http token resource.
 
         :returns: The instance of :class:`Token
             <x8api.http.auth.Token>`.
@@ -361,7 +361,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     # @property
     # def profile(self):
-    #     """Property for get IQ Option http profile resource.
+    #     """Property for get X8 option http profile resource.
 
     #     :returns: The instance of :class:`Profile
     #         <x8api.http.profile.Profile>`.
@@ -376,7 +376,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def changebalance(self):
-        """Property for get IQ Option http changebalance resource.
+        """Property for get X8 option http changebalance resource.
 
         :returns: The instance of :class:`Changebalance
             <x8api.http.changebalance.Changebalance>`.
@@ -389,7 +389,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def billing(self):
-        """Property for get IQ Option http billing resource.
+        """Property for get X8 option http billing resource.
 
         :returns: The instance of :class:`Billing
             <x8api.http.billing.Billing>`.
@@ -398,7 +398,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def buyback(self):
-        """Property for get IQ Option http buyback resource.
+        """Property for get X8 option http buyback resource.
 
         :returns: The instance of :class:`Buyback
             <x8api.http.buyback.Buyback>`.
@@ -408,7 +408,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def getprofile(self):
-        """Property for get IQ Option http getprofile resource.
+        """Property for get X8 option http getprofile resource.
 
         :returns: The instance of :class:`Login
             <x8api.http.getprofile.Getprofile>`.
@@ -418,7 +418,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def get_balances(self):
-        """Property for get IQ Option http getprofile resource.
+        """Property for get X8 option http getprofile resource.
 
         :returns: The instance of :class:`Login
             <x8api.http.getprofile.Getprofile>`.
@@ -436,7 +436,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def ssid(self):
-        """Property for get IQ Option websocket ssid chanel.
+        """Property for get X8 option websocket ssid chanel.
 
         :returns: The instance of :class:`Ssid
             <x8api.ws.chanels.ssid.Ssid>`.
@@ -475,7 +475,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
     @property
     def subscribe(self):
         "candle-generated"
-        """Property for get IQ Option websocket subscribe chanel.
+        """Property for get X8 option websocket subscribe chanel.
 
         :returns: The instance of :class:`Subscribe
             <x8api.ws.chanels.subscribe.Subscribe>`.
@@ -488,7 +488,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def unsubscribe(self):
-        """Property for get IQ Option websocket unsubscribe chanel.
+        """Property for get X8 option websocket unsubscribe chanel.
 
         :returns: The instance of :class:`Unsubscribe
             <x8api.ws.chanels.unsubscribe.Unsubscribe>`.
@@ -600,7 +600,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def setactives(self):
-        """Property for get IQ Option websocket setactives chanel.
+        """Property for get X8 option websocket setactives chanel.
 
         :returns: The instance of :class:`SetActives
             <x8api.ws.chanels.setactives.SetActives>`.
@@ -613,7 +613,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def getcandles(self):
-        """Property for get IQ Option websocket candles chanel.
+        """Property for get X8 option websocket candles chanel.
 
         :returns: The instance of :class:`GetCandles
             <x8api.ws.chanels.candles.GetCandles>`.
@@ -656,7 +656,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
     @property
     def buy(self):
-        """Property for get IQ Option websocket buyv2 request.
+        """Property for get X8 option websocket buyv2 request.
 
         :returns: The instance of :class:`Buyv2
             <x8api.ws.chanels.buyv2.Buyv2>`.
@@ -834,7 +834,7 @@ class x8api(object):  # pylint: disable=too-many-instance-attributes
 
         global_value.ssl_Mutual_exclusion = False
         global_value.ssl_Mutual_exclusion_write = False
-        """Method for connection to IQ Option API."""
+        """Method for connection to X8 option API."""
         try:
             self.close()
         except:

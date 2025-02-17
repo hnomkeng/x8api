@@ -1,9 +1,9 @@
-"""Module for IQ Option Profile websocket object."""
+"""Module for X8 option Profile websocket object."""
 from x8api.ws.objects.base import Base
 
 
 class Profile(Base):
-    """Class for IQ Option Profile websocket object."""
+    """Class for X8 option Profile websocket object."""
 
     def __init__(self):
         super(Profile, self).__init__()

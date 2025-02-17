@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def underlying_list(api, message):
     if message["name"] == "underlying-list":

@@ -1,8 +1,8 @@
-"""Module for base IQ Option http base resource."""
+"""Module for base X8 option http base resource."""
 
 
 class Resource(object):
-    """Class for base IQ Option API http resource."""
+    """Class for base X8 option API http resource."""
     # pylint: disable=too-few-public-methods
 
     def __init__(self, api):
@@ -13,7 +13,7 @@ class Resource(object):
         self.api = api
 
     def send_http_request(self, method, data=None, params=None, headers=None):
-        """Send http request to IQ Option API.
+        """Send http request to X8 option API.
 
         :param str method: The http request method.
         :param dict data: (optional) The http request data.

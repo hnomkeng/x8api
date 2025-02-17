@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def digital_option_placed(api, message, api_dict_clean):
     if message["name"] == "digital-option-placed":

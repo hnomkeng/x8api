@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def available_leverages(api, message):
     if message["name"] == "available-leverages":

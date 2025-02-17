@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 import x8api.constants as OP_code
 
 def instrument_quotes_generated(api, message):
@@ -8,7 +8,7 @@ def instrument_quotes_generated(api, message):
         period = message["msg"]["expiration"]["period"]
         ans = {}
         for data in message["msg"]["quotes"]:
-            # FROM IQ OPTION SOURCE CODE
+            # FROM X8 option SOURCE CODE
             if data["price"]["ask"] == None:
                 ProfitPercent = None
             else:

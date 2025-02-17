@@ -4,7 +4,7 @@ from x8api.ws.chanels.base import Base
 
 
 class Get_instruments(Base):
-    """Class for IQ option buy websocket chanel."""
+    """Class for X8 option buy websocket chanel."""
     # pylint: disable=too-few-public-methods
 
     name = "sendMessage"

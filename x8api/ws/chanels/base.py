@@ -1,8 +1,8 @@
-"""Module for base IQ Option base websocket chanel."""
+"""Module for base X8 option base websocket chanel."""
 import time
 
 class Base(object):
-    """Class for base IQ Option websocket chanel."""
+    """Class for base X8 option websocket chanel."""
     # pylint: disable=too-few-public-methods
 
     def __init__(self, api):
@@ -13,7 +13,7 @@ class Base(object):
         self.api = api
 
     def send_websocket_request(self, name, msg,request_id=""):
-        """Send request to IQ Option server websocket.
+        """Send request to X8 option server websocket.
 
         :param str name: The websocket chanel name.
         :param dict msg: The websocket chanel msg.

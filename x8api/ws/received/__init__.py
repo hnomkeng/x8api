@@ -1,1 +1,1 @@
-"""Module for IQ Option API websocket received."""
+"""Module for X8 option API websocket received."""

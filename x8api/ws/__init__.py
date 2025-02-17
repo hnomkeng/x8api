@@ -1,1 +1,1 @@
-"""Module for IQ Option API websocket."""
+"""Module for X8 option API websocket."""

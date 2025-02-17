@@ -1,4 +1,4 @@
-"""Module for IQ Option TimeSync websocket object."""
+"""Module for X8 option TimeSync websocket object."""
 
 import time
 import datetime
@@ -7,7 +7,7 @@ from x8api.ws.objects.base import Base
 
 
 class TimeSync(Base):
-    """Class for IQ Option TimeSync websocket object."""
+    """Class for X8 option TimeSync websocket object."""
 
     def __init__(self):
         super(TimeSync, self).__init__()

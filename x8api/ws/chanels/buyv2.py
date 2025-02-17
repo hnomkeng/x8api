@@ -1,4 +1,4 @@
-"""Module for IQ Option buyV2 websocket chanel."""
+"""Module for X8 option buyV2 websocket chanel."""
 from datetime import datetime, timedelta
 import x8api.global_value as global_value
 from x8api.ws.chanels.base import Base
@@ -6,7 +6,7 @@ from x8api.expiration import get_expiration_time
 
 
 class Buyv2(Base):
-    """Class for IQ option buy websocket chanel."""
+    """Class for X8 option buy websocket chanel."""
     # pylint: disable=too-few-public-methods
 
     name = "sendMessage"

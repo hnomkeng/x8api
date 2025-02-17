@@ -1,16 +1,16 @@
-"""Module for IQ Option http login resource."""
+"""Module for X8 option http login resource."""
 
 from x8api.http.resource import Resource
 
 
 class Logout(Resource):
-    """Class for IQ option login resource."""
+    """Class for X8 option login resource."""
     # pylint: disable=too-few-public-methods
 
     url = ""
 
     def _post(self, data=None, headers=None):
-        """Send get request for IQ Option API login http resource.
+        """Send get request for X8 option API login http resource.
 
         :returns: The instance of :class:`requests.Response`.
         """

@@ -1,9 +1,9 @@
-"""A python wrapper for IQ Option API."""
+"""A python wrapper for X8 option API."""
 
 import logging
 
 def _prepare_logging():
-    """Prepare logger for module IQ Option API."""
+    """Prepare logger for module X8 option API."""
     logger = logging.getLogger(__name__)
     #https://github.com/Lu-Yi-Hsun/x8api_private/issues/1
     #try to fix this problem

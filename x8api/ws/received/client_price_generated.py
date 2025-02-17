@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def client_price_generated(api, message):
     if message["name"] == "client-price-generated":

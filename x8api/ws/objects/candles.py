@@ -1,10 +1,10 @@
-"""Module for IQ Option Candles websocket object."""
+"""Module for X8 option Candles websocket object."""
 
 from x8api.ws.objects.base import Base
 
 
 class Candle(object):
-    """Class for IQ Option candle."""
+    """Class for X8 option candle."""
 
     def __init__(self, candle_data):
         """
@@ -65,7 +65,7 @@ class Candle(object):
 
 
 class Candles(Base):
-    """Class for IQ Option Candles websocket object."""
+    """Class for X8 option Candles websocket object."""
 
     def __init__(self):
         super(Candles, self).__init__()

@@ -1,8 +1,8 @@
-"""Module for IQ Option Base websocket object."""
+"""Module for X8 option Base websocket object."""
 
 
 class Base(object):
-    """Class for IQ Option Base websocket object."""
+    """Class for X8 option Base websocket object."""
     # pylint: disable=too-few-public-methods
 
     def __init__(self):

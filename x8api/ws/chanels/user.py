@@ -1,4 +1,4 @@
-"""Module for IQ option unsubscribe websocket chanel."""
+"""Module for X8 option unsubscribe websocket chanel."""
 
 from x8api.ws.chanels.base import Base
 import datetime
@@ -21,7 +21,7 @@ class Get_user_profile_client(Base):
         self.send_websocket_request(self.name, data)
 
 class Request_leaderboard_userinfo_deals_client(Base):
-    """Class for IQ option candles websocket chanel."""
+    """Class for X8 option candles websocket chanel."""
     # pylint: disable=too-few-public-methods
     name = "sendMessage"
 
@@ -37,7 +37,7 @@ class Request_leaderboard_userinfo_deals_client(Base):
         self.send_websocket_request(self.name, data)
 
 class Get_users_availability(Base):
-    """Class for IQ option candles websocket chanel."""
+    """Class for X8 option candles websocket chanel."""
     # pylint: disable=too-few-public-methods
     name = "sendMessage"
 

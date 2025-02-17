@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def order_placed_temp(api, message):
     if message["name"] == "order-placed-temp":

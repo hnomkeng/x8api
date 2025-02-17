@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 import json
 import logging
@@ -63,7 +63,7 @@ from x8api.ws.received.users_availability import users_availability
 
 
 class WebsocketClient(object):
-    """Class for work with IQ option websocket."""
+    """Class for work with X8 option websocket."""
 
     def __init__(self, api):
         """

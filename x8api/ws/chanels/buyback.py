@@ -1,10 +1,10 @@
-"""Module for IQ Option buyback websocket chanel."""
+"""Module for X8 option buyback websocket chanel."""
 
 from x8api.ws.chanels.base import Base
 
 
 class Buyback(Base):
-    """Class for IQ option subscribe to buyback websocket chanel."""
+    """Class for X8 option subscribe to buyback websocket chanel."""
     # pylint: disable=too-few-public-methods
 
     name = "buyback"

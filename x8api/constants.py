@@ -1,5 +1,5 @@
 ""
-"Module for IQ Option API constants."
+"Module for X8 option API constants."
 ""#~~~need to update~~~
 ACTIVES = {
 	"EURUSD-op": 1,

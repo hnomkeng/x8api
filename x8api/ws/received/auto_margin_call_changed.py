@@ -1,4 +1,4 @@
-"""Module for IQ option websocket."""
+"""Module for X8 option websocket."""
 
 def auto_margin_call_changed(api, message):
     if message["name"] == "auto-margin-call-changed":

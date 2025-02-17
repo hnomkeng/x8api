@@ -1,10 +1,10 @@
-"""Module for IQ option setactives websocket chanel."""
+"""Module for X8 option setactives websocket chanel."""
 
 from x8api.ws.chanels.base import Base
 
 
 class SetActives(Base):
-    """Class for IQ option setactives websocket chanel."""
+    """Class for X8 option setactives websocket chanel."""
     # pylint: disable=too-few-public-methods
 
     name = "setActives"
