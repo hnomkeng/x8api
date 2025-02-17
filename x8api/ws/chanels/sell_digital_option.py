@@ -1,5 +1,5 @@
  
-from iqoptionapi.ws.chanels.base import Base
+from x8api.ws.chanels.base import Base
 import time
 
 class Sell_Digital_Option(Base):

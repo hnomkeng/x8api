@@ -1,8 +1,8 @@
 """Module for IQ Option buyV2 websocket chanel."""
 from datetime import datetime, timedelta
-import iqoptionapi.global_value as global_value
-from iqoptionapi.ws.chanels.base import Base
-from iqoptionapi.expiration import get_expiration_time
+import x8api.global_value as global_value
+from x8api.ws.chanels.base import Base
+from x8api.expiration import get_expiration_time
 
 
 class Buyv2(Base):

@@ -1,6 +1,6 @@
 """Module for IQ Option http loginv2 resource."""
 
-from iqoptionapi.http.login import Login
+from x8api.http.login import Login
 
 
 class Loginv2(Login):

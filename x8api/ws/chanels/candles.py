@@ -1,6 +1,6 @@
 """Module for IQ option candles websocket chanel."""
 
-from iqoptionapi.ws.chanels.base import Base
+from x8api.ws.chanels.base import Base
 import time
 
 class GetCandles(Base):
@@ -17,7 +17,7 @@ class GetCandles(Base):
         :param amount: The number of candles you want to have
         """
         #thank SeanStayn share new request
-        #https://github.com/n1nj4z33/iqoptionapi/issues/88
+        #https://github.com/n1nj4z33/x8api/issues/88
         data = {"name":"get-candles",
                 "version":"2.0",
                 "body":{

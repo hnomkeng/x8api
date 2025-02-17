@@ -1,6 +1,6 @@
 import datetime
 import time
-from iqoptionapi.ws.chanels.base import Base
+from x8api.ws.chanels.base import Base
 
 
 class Close_position(Base):

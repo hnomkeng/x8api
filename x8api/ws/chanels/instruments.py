@@ -1,6 +1,6 @@
 import datetime
 
-from iqoptionapi.ws.chanels.base import Base
+from x8api.ws.chanels.base import Base
 
 
 class Get_instruments(Base):

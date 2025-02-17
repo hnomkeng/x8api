@@ -1,7 +1,7 @@
 """Module for IQ Option http token resource."""
 
-from iqoptionapi.http.resource import Resource
-from iqoptionapi.http.auth import Auth
+from x8api.http.resource import Resource
+from x8api.http.auth import Auth
 
 
 class Token(Resource):

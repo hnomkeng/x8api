@@ -3,7 +3,7 @@
 import time
 import datetime
 
-from iqoptionapi.ws.objects.base import Base
+from x8api.ws.objects.base import Base
 
 
 class TimeSync(Base):

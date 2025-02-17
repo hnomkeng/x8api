@@ -1,6 +1,6 @@
 """Module for IQ option websocket."""
-import iqoptionapi.constants as OP_code
-import iqoptionapi.global_value as global_value
+import x8api.constants as OP_code
+import x8api.global_value as global_value
 
 def candle_generated_realtime(api, message, dict_queue_add):
     if message["name"] == "candle-generated":

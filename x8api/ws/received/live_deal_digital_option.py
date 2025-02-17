@@ -1,5 +1,5 @@
 """Module for IQ option websocket."""
-import iqoptionapi.constants as OP_code
+import x8api.constants as OP_code
 from threading import Thread
 
 def live_deal_digital_option(api, message):

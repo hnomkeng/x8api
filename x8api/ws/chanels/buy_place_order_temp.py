@@ -1,7 +1,7 @@
 import datetime
 import time
-from iqoptionapi.ws.chanels.base import Base
-import iqoptionapi.global_value as global_value
+from x8api.ws.chanels.base import Base
+import x8api.global_value as global_value
 #work for forex digit cfd(stock)
 
 class Buy_place_order_temp(Base):

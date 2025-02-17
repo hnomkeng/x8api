@@ -1,17 +1,17 @@
 # python
-from iqoptionapi.api import IQOptionAPI
-import iqoptionapi.constants as OP_code
-import iqoptionapi.country_id as Country
+from x8api.api import x8api
+import x8api.constants as OP_code
+import x8api.country_id as Country
 import threading
 import time
 import json
 import logging
 import operator
-import iqoptionapi.global_value as global_value
+import x8api.global_value as global_value
 from collections import defaultdict
 from collections import deque
-from iqoptionapi.expiration import get_expiration_time, get_remaning_time
-from iqoptionapi.version_control import api_version
+from x8api.expiration import get_expiration_time, get_remaning_time
+from x8api.version_control import api_version
 from datetime import datetime, timedelta
 from random import randint
 
@@ -85,8 +85,8 @@ class IQ_Option:
             pass
             # logging.error('**warning** self.api.close() fail')
 
-        self.api = IQOptionAPI(
-            "iqoption.com", self.email, self.password)
+        self.api = x8api(
+            "8xtrade.com", self.email, self.password)
         check = None
 
         # 2FA--
@@ -772,7 +772,7 @@ class IQ_Option:
                     pass
             time.sleep(polling_time)
 
-        # Function by kkagill ( https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/196 | https://github.com/kkagill )
+        # Function by kkagill ( https://github.com/Lu-Yi-Hsun/x8api/issues/196 | https://github.com/kkagill )
         # Function only work with Options!
 
     def check_win_v4(self, id_number):
@@ -1031,7 +1031,7 @@ class IQ_Option:
         return False
 
     # thank thiagottjv
-    # https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/65#issuecomment-513998357
+    # https://github.com/Lu-Yi-Hsun/x8api/issues/65#issuecomment-513998357
 
     def buy_digital_spot(self, active, amount, action, duration):
         # Expiration time need to be formatted like this: YYYYMMDDHHII

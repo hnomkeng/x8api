@@ -1,6 +1,6 @@
 """Module for IQ Option http login resource."""
 
-from iqoptionapi.http.resource import Resource
+from x8api.http.resource import Resource
 
 
 class Events(Resource):
@@ -14,7 +14,7 @@ class Events(Resource):
 
         :returns: The instance of :class:`requests.Response`.
         """
-        return self.api.send_http_request_v2(method=method, url="https://event.iqoption.com/api/v1/events",data=data)
+        return self.api.send_http_request_v2(method=method, url="https://event.8xtrade.com/api/v1/events",data=data)
 
     def __call__(self,method,data,headers=None):
         """Method to get IQ Option API login http request.

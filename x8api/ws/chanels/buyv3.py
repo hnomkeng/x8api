@@ -1,9 +1,9 @@
 import datetime
 import time
-from iqoptionapi.ws.chanels.base import Base
+from x8api.ws.chanels.base import Base
 import logging
-import iqoptionapi.global_value as global_value
-from iqoptionapi.expiration import get_expiration_time
+import x8api.global_value as global_value
+from x8api.expiration import get_expiration_time
 
 
 class Buyv3(Base):
@@ -13,7 +13,7 @@ class Buyv3(Base):
     def __call__(self, price, active, direction, duration, request_id):
 
         # thank Darth-Carrotpie's code
-        # https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/6
+        # https://github.com/Lu-Yi-Hsun/x8api/issues/6
         exp, idx = get_expiration_time(
             int(self.api.timesync.server_timestamp), duration)
         if idx < 5:
@@ -41,7 +41,7 @@ class Buyv3_by_raw_expired(Base):
     def __call__(self, price, active, direction, option, expired, request_id):
 
         # thank Darth-Carrotpie's code
-        # https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/6
+        # https://github.com/Lu-Yi-Hsun/x8api/issues/6
 
         if option == "turbo":
             option_id = 3  # "turbo"
@@ -63,7 +63,7 @@ class Buyv3_by_raw_expired(Base):
 
 """
     # thank Darth-Carrotpie's code
-    # https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/6
+    # https://github.com/Lu-Yi-Hsun/x8api/issues/6
     def get_expiration_time(self, duration):
         exp = time.time()
         if duration >= 1 and duration <= 5:

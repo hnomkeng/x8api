@@ -1,8 +1,8 @@
 """Module for IQ option subscribe websocket chanel."""
 
-from iqoptionapi.ws.chanels.base import Base
+from x8api.ws.chanels.base import Base
 import datetime
-import iqoptionapi.constants as OP_code
+import x8api.constants as OP_code
 
 
 class Subscribe(Base):

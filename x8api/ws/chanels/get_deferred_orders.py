@@ -1,6 +1,6 @@
-from iqoptionapi.ws.chanels.base import Base
+from x8api.ws.chanels.base import Base
 import time
-import iqoptionapi.global_value as global_value
+import x8api.global_value as global_value
 class GetDeferredOrders(Base):
     
     name = "sendMessage"

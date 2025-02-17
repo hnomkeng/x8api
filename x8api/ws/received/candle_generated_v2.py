@@ -1,4 +1,4 @@
-import iqoptionapi.constants as OP_code
+import x8api.constants as OP_code
 
 def candle_generated_v2(api, message, dict_queue_add):
     if message["name"] == "candles-generated":

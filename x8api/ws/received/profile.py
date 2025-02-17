@@ -1,5 +1,5 @@
 """Module for IQ option websocket."""
-import iqoptionapi.global_value as global_value
+import x8api.global_value as global_value
 
 def profile(api, message):
     if message["name"] == "profile":

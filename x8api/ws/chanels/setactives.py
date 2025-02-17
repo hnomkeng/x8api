@@ -1,6 +1,6 @@
 """Module for IQ option setactives websocket chanel."""
 
-from iqoptionapi.ws.chanels.base import Base
+from x8api.ws.chanels.base import Base
 
 
 class SetActives(Base):
