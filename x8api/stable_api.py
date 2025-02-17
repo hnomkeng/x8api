@@ -23,7 +23,7 @@ def nested_dict(n, type):
         return defaultdict(lambda: nested_dict(n - 1, type))
 
 
-class IQ_Option:
+class X8_Option:
     __version__ = api_version
 
     def __init__(self, email, password, active_account_type="PRACTICE"):

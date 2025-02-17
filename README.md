@@ -151,7 +151,7 @@ pip install -U https://github.com/hnomkeng/x8api/archive/refs/heads/master.zip
 
 ```Python
 # Alto Nivel
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 
 # Baixo Nivel
 from x8api.api import x8api
@@ -197,8 +197,8 @@ sudo pip3 install websocket-client==0.47.0
 
 ```python
 import time
-from x8api.stable_api import IQ_Option
-Iq=IQ_Option("email","password")
+from x8api.stable_api import X8_Option
+Iq=X8_Option("email","password")
 goal="EURUSD"
 print("get candles")
 print(Iq.get_candles(goal,60,111,time.time()))
@@ -211,7 +211,7 @@ print(Iq.get_candles(goal,60,111,time.time()))
 ### Import
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 ```
 
 ---
@@ -242,7 +242,7 @@ I suggest close it because your robot will stop to wait you to check sms code (o
 Desligado
 
 ```python
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 ```
 
 ---
@@ -256,9 +256,9 @@ https://github.com/Lu-Yi-Hsun/x8api/issues/22
 ## Como realizar login
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 
-API = IQ_Option("email", "senha")
+API = X8_Option("email", "senha")
 ```
 
 Iq.set_max_reconnect(number)
@@ -275,10 +275,10 @@ Iq.set_max_reconnect(number)
 Caso ocorra algum erro e a conexão com a IQ seja perdida, você pode estar implementando isto
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import time
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 Iq.set_max_reconnect(-1)#allow unlimited reconnect
 while True:
     #you can !!close yuor network!! to simulation network fails
@@ -294,10 +294,10 @@ while True:
 ## Como realizar login com 2 fatores
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 
 print("Conectando...")
-api = IQ_Option("email", "password")
+api = X8_Option("email", "password")
 status, reason = api.connect()
 print('##### Primeira tentativa #####')
 print('Status:', status)
@@ -393,11 +393,11 @@ DICT["forex"/"cfd"/"crypto"/"digital"/"turbo"/"binary"][asset name]["open"]
 it will return True/False
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import logging
 import random
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 ALL_Asset=Iq.get_all_open_time()
 #check if open or not
 print(ALL_Asset["forex"]["EURUSD"]["open"])
@@ -453,10 +453,10 @@ print(API.get_all_ACTIVES_OPCODE())
 get the order data by id
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 
 ACTIVES="EURUSD"
 duration=1#minute 1 or 5
@@ -520,10 +520,10 @@ API.get_traders_mood(Paridade)
 Sample
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import time
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","pass")
+Iq=X8_Option("email","pass")
 goal="EURUSD"
 print("get candles")
 print(Iq.get_candles(goal,60,111,time.time()))
@@ -551,8 +551,8 @@ Iq.buy(Money,ACTIVES,ACTION,expirations)
 Sample
 
 ```python
-from x8api.stable_api import IQ_Option
-Iq=IQ_Option("email","password")
+from x8api.stable_api import X8_Option
+Iq=X8_Option("email","password")
 Money=[]
 ACTIVES=[]
 ACTION=[]
@@ -582,8 +582,8 @@ print(Iq.check_win_v2(id_list[0]))
 Formula: tempo de compra = tempo restante - 30
 
 ```python
-from x8api.stable_api import IQ_Option
-Iq=IQ_Option("email","password")
+from x8api.stable_api import X8_Option
+Iq=X8_Option("email","password")
 Money=1
 ACTIVES="EURUSD"
 ACTION="call"#or "put"
@@ -607,12 +607,12 @@ Iq.sell_option(sell_all)#input int or list
 Exemplo
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import time
 print("login...")
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 
-API = IQ_Option("email", "password")
+API = X8_Option("email", "password")
 
 Entrada = 1
 Paridade = "EURUSD"
@@ -653,7 +653,7 @@ Iq.check_win(23243221)
 
 ##### check_win_v2
 
-API = IQ_Option("email", "password")
+API = X8_Option("email", "password")
 
 Entrada = 1
 Paridade = "EURUSD"
@@ -690,9 +690,9 @@ Iq.get_all_init()
 Exemplo
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 
-API = IQ_Option("email", "password")
+API = X8_Option("email", "password")
 
 print(API.get_all_init())
 ```
@@ -704,9 +704,9 @@ print(API.get_all_init())
 sample
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 print("login...")
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 d=Iq.get_binary_option_detail()
 print(d["CADCHF"]["turbo"])
 print(d["CADCHF"]["binary"])
@@ -717,9 +717,9 @@ print(d["CADCHF"]["binary"])
 sample
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 print("login...")
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 d=Iq.get_all_profit()
 print(d["CADCHF"]["turbo"])
 print(d["CADCHF"]["binary"])
@@ -753,7 +753,7 @@ print(Iq.get_optioninfo(10))
 
 #### <a id=optioninfo>get_optioninfo_v2</a>
 
-API = IQ_Option("email", "password")
+API = X8_Option("email", "password")
 
 print(API.get_optioninfo_v2(10))
 
@@ -769,8 +769,8 @@ Se sua conta está logada em outro celular/PC e está realizando operações, vo
 
 ```python
 import time
-from x8api.stable_api import IQ_Option
-Iq=IQ_Option("email","password")
+from x8api.stable_api import X8_Option
+Iq=X8_Option("email","password")
 while True:
     #please open website iqoption and buy some binary option
     if Iq.get_option_open_by_other_pc()!={}:
@@ -796,10 +796,10 @@ print(Iq.get_option_open_by_other_pc())
 ### Para digitais
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import time
 import random
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 
 ACTIVES="EURUSD"
 duration=1#minute 1 or 5
@@ -863,9 +863,9 @@ Formato da informação retornada
 
 Exemplo de uso
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import time
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 ACTIVES="EURUSD"
 duration=1#minute 1 or 5
 Iq.subscribe_strike_list(ACTIVES,duration)
@@ -882,9 +882,9 @@ Iq.unsubscribe_strike_list(ACTIVES,duration)
 Abrir operação na digital com preço atual
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 
 ACTIVES="EURUSD"
 duration=1#minute 1 or 5
@@ -898,8 +898,8 @@ print(Iq.buy_digital_spot(ACTIVES,amount,action,duration))
 ![](image/profit_after_sale.png)
 
 ```python
-from x8api.stable_api import IQ_Option
-Iq=IQ_Option("email","passord")
+from x8api.stable_api import X8_Option
+Iq=X8_Option("email","passord")
 ACTIVES="EURUSD"
 duration=1#minute 1 or 5
 amount=100
@@ -920,11 +920,11 @@ while True:
 get current price profit
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import time
 import logging
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 ACTIVES="EURUSD"
 duration=1#minute 1 or 5
 Iq.subscribe_strike_list(ACTIVES,duration)
@@ -977,15 +977,15 @@ Iq.check_win_digital_v2(id)#get the id from Iq.buy_digital
 Exemplo
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import logging
 import random
 import time
 import datetime
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 
-API = IQ_Option("email", "password")
+API = X8_Option("email", "password")
 
 
 Paridade = "EURUSD"
@@ -1026,11 +1026,11 @@ Iq.close_digital_option(id)
 Utilizando get_digital_position()
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import logging
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 ACTIVES="EURUSD-OTC"
 duration=1#minute 1 or 5
 amount=1
@@ -1074,8 +1074,8 @@ you can search instrument_type and instrument_id from this file
 #### Sample
 
 ```python
-from x8api.stable_api import IQ_Option
-Iq=IQ_Option("email","password")
+from x8api.stable_api import X8_Option
+Iq=X8_Option("email","password")
 
 instrument_type="crypto"
 instrument_id="BTCUSD"
@@ -1284,13 +1284,13 @@ instrument_type="crypto","forex","fx-option","turbo-option","multi-option","cfd"
 get_position_history_v2(instrument_type,limit,offset,start,end)
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import logging
 import random
 import time
 import datetime
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 
 #instrument_type="crypto","forex","fx-option","turbo-option","multi-option","cfd","digital-option"
 instrument_type="digital-option"
@@ -1395,9 +1395,9 @@ Iq.get_candles(ACTIVES,interval,count,endtime)
 try this code to get more than 1000 candle
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import time
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 end_from_time=time.time()
 ANS=[]
 for i in range(70):
@@ -1412,12 +1412,12 @@ print(ANS)
 ##### Sample
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import logging
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
 print("login...")
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 goal="EURUSD"
 size="all"#size=[1,5,10,15,30,60,120,300,600,900,1800,3600,7200,14400,28800,43200,86400,604800,2592000,"all"]
 maxdict=10
@@ -1505,11 +1505,11 @@ while True:
 instrument_type="binary-option"/"digital-option"/"forex"/"cfd"/"crypto"
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import logging
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 instrument_type="digital-option"#"binary-option"/"digital-option"/"forex"/"cfd"/"crypto"
 Iq.subscribe_top_assets_updated(instrument_type)
 
@@ -1529,7 +1529,7 @@ https://github.com/Lu-Yi-Hsun/x8api/issues/131
 ![](https://user-images.githubusercontent.com/7738916/66943816-c9ee1380-f000-11e9-996e-e06efba64101.png)
 
 ```python
-from x8api.stable_api import IQ_Option
+from x8api.stable_api import X8_Option
 import logging
 import time
 import operator
@@ -1538,7 +1538,7 @@ import operator
 def opcode_to_name(opcode_data,opcode):
     return list(opcode_data.keys())[list(opcode_data.values()).index(opcode)]
 
-Iq=IQ_Option("email","password")
+Iq=X8_Option("email","password")
 Iq.update_ACTIVES_OPCODE()
 opcode_data=Iq.get_all_ACTIVES_OPCODE()
 
@@ -1580,8 +1580,8 @@ for now... only support get binary option mood , i will implement beterr if need
 Sample
 
 ```python
-from x8api.stable_api import IQ_Option
-Iq=IQ_Option("email","password")
+from x8api.stable_api import X8_Option
+Iq=X8_Option("email","password")
 goal="EURUSD"
 instrument="forex" ## Option "forex", "turbo-option"
 Iq.start_mood_stream(goal, instrument)
@@ -1652,8 +1652,8 @@ Iq.get_balance()
 reset practice balance to \$10000
 
 ```python
-from x8api.stable_api import IQ_Option
-Iq=IQ_Option("email","password")
+from x8api.stable_api import X8_Option
+Iq=X8_Option("email","password")
 print(Iq.reset_practice_balance())
 ```
 
