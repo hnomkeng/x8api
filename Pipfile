@@ -23,4 +23,4 @@ snakeviz = "*"
 python_version = "3.9"
 
 [scripts]
-test = "sh -c 'isort iqoptionapi && black iqoptionapi && flake8 --exclude .venv && mypy --ignore-missing-imports && pytest'"
+test = "sh -c 'isort x8api && black x8api && flake8 --exclude .venv && mypy --ignore-missing-imports && pytest'"

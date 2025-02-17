@@ -5,7 +5,7 @@ Para manter o projeto continuamente atualizado contribua com uma doação, com a
 
 As doações serão usadas para adicionar novas features citadas abaixo.
 
-https://streamelements.com/iqoptionapi/tip
+https://streamelements.com/x8api/tip
 <br><br>
 ## Español - AYUDA A MANTENER ESTE PROYECTO ACTIVO 
 Para mantener el proyecto continuamente actualizado, contribuye con una donación, con cualquier corrección o mejora.
@@ -14,7 +14,7 @@ Las donaciones se utilizarán para agregar nuevas funciones que se mencionan a c
 
 EN: To keep the project continuously updated you can contribute with a donation or with some correction or improvement.
 
-https://streamelements.com/iqoptionapi/tip
+https://streamelements.com/x8api/tip
 <br><br>
 
 ## HELP KEEPING THIS PROJECT ACTIVE
@@ -23,7 +23,7 @@ To keep project continuously updated, contribute with a donation, with any corre
 
 Donations will be used to add new features mentioned below.
 
-https://streamelements.com/iqoptionapi/tip
+https://streamelements.com/x8api/tip
 <br><br>
 
 ## PLANEJAMENTO DE NOVAS FEATURES 
@@ -74,23 +74,23 @@ https://www.youtube.com/channel/UCetDOTbLD_gCy0aI4aQwMsg
 
 <div align="center">
 	<h2> Idiomas | Languages </h2>
-	<a href="https://iqoptionapi.github.io/iqoptionapi/pt/">
+	<a href="https://x8api.github.io/x8api/pt/">
 		<img src="doc/image/flags/br.png "
 		alt="Português" width="50" height="50" />
 	</a>
-	<a href="https://iqoptionapi.github.io/iqoptionapi/es/">
+	<a href="https://x8api.github.io/x8api/es/">
 		<img src="doc/image/flags/es.png "
 		alt="Espanol" width="50" height="50" />
 	</a>
-	<a href="https://iqoptionapi.github.io/iqoptionapi/en/">
+	<a href="https://x8api.github.io/x8api/en/">
 		<img src="doc/image/flags/en.png "
 		alt="English" width="50" height="50" />
 	</a>
 </div><br><br>
 
-This api is based on [Lu-Yi-Hsun](https://github.com/Lu-Yi-Hsun/iqoptionapi/)
+This api is based on [Lu-Yi-Hsun](https://github.com/Lu-Yi-Hsun/x8api/)
 
-Thanks also for [this version](https://github.com/evecimar/iqoptionapi) he fixed some bugs.
+Thanks also for [this version](https://github.com/evecimar/x8api) he fixed some bugs.
 
 It was not been updated by him.
 So I decided to study and do this work.
@@ -105,7 +105,7 @@ I don't know how all works yet but I'll learn and teach you
 
 ## Live documentation
 
-[documentation](https://iqoptionapi.github.io/iqoptionapi/)
+[documentation](https://x8api.github.io/x8api/)
 
 <div id='contribe'/>
 
@@ -142,25 +142,25 @@ pip install websocket-client==0.56
 Now you can install this project as library:
 
 ```bash
-sudo pip install -U git+git://github.com/hnomkeng/iqoption_api_hnk.git
+sudo pip install -U git+git://github.com/hnomkeng/hnomkeng/x8api.git
 
 OR 
 
-pip install -U https://github.com/hnomkeng/iqoption_api_hnk/archive/refs/heads/master.zip
+pip install -U https://github.com/hnomkeng/x8api/archive/refs/heads/master.zip
 ```
 
 ```Python
 # Alto Nivel
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 
 # Baixo Nivel
-from iqoptionapi.api import IQOptionAPI
+from x8api.api import x8api
 ```
 
 ```bash
 .
 ├── docs
-├── iqoptionapi(Código da API)
+├── x8api(Código da API)
     ├── http(Realiza requisições HTTP GET/POST)
     └── ws
         ├── chanels(Doing websocket action)
@@ -182,7 +182,7 @@ sudo pip3 install websocket-client==0.56
 
 if you have this problem
 
-https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/66
+https://github.com/Lu-Yi-Hsun/x8api/issues/66
 
 fix way
 
@@ -197,7 +197,7 @@ sudo pip3 install websocket-client==0.47.0
 
 ```python
 import time
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 Iq=IQ_Option("email","password")
 goal="EURUSD"
 print("get candles")
@@ -211,7 +211,7 @@ print(Iq.get_candles(goal,60,111,time.time()))
 ### Import
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 ```
 
 ---
@@ -251,12 +251,12 @@ Iq=IQ_Option("email","password")
 
 default number is 5
 
-https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/22
+https://github.com/Lu-Yi-Hsun/x8api/issues/22
 
 ## Como realizar login
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 
 API = IQ_Option("email", "senha")
 ```
@@ -275,7 +275,7 @@ Iq.set_max_reconnect(number)
 Caso ocorra algum erro e a conexão com a IQ seja perdida, você pode estar implementando isto
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import time
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
 Iq=IQ_Option("email","password")
@@ -294,7 +294,7 @@ while True:
 ## Como realizar login com 2 fatores
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 
 print("Conectando...")
 api = IQ_Option("email", "password")
@@ -393,7 +393,7 @@ DICT["forex"/"cfd"/"crypto"/"digital"/"turbo"/"binary"][asset name]["open"]
 it will return True/False
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import logging
 import random
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
@@ -426,7 +426,7 @@ print(ALL_Asset["binary"]["EURUSD-OTC"]["open"])
 
 you will get right all ACTIVES and code
 
-[ACTIVES](iqoptionapi/constants.py)
+[ACTIVES](x8api/constants.py)
 
 Para exibir todas os ativos
 
@@ -442,7 +442,7 @@ print(tipo,ativo_nome,value["open"])
 ---
 
 ### Ver o nome e ID de todos os ativos
-- [Arquivo com lista de ativos e id's](iqoptionapi/constants.py)
+- [Arquivo com lista de ativos e id's](x8api/constants.py)
 
 ```python
 print(API.get_all_ACTIVES_OPCODE())
@@ -453,7 +453,7 @@ print(API.get_all_ACTIVES_OPCODE())
 get the order data by id
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
 Iq=IQ_Option("email","password")
@@ -520,7 +520,7 @@ API.get_traders_mood(Paridade)
 Sample
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import time
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
 Iq=IQ_Option("email","pass")
@@ -542,7 +542,7 @@ Iq.buy(Money,ACTIVES,ACTION,expirations)
                 #Money:How many you want to buy type(int)
                 #ACTIVES:sample input "EURUSD" OR "EURGBP".... you can view by get_all_ACTIVES_OPCODE
                 #ACTION:"call"/"put" type(str)
-                #expirations:input minute,careful too large will false to buy(Closed market time)thank Darth-Carrotpie's code (int)https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/6
+                #expirations:input minute,careful too large will false to buy(Closed market time)thank Darth-Carrotpie's code (int)https://github.com/Lu-Yi-Hsun/x8api/issues/6
                 #return:(None/id_number):if sucess return (id_number) esle return(None) 2.1.5 change this
 ```
 
@@ -551,7 +551,7 @@ Iq.buy(Money,ACTIVES,ACTION,expirations)
 Sample
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 Iq=IQ_Option("email","password")
 Money=[]
 ACTIVES=[]
@@ -582,7 +582,7 @@ print(Iq.check_win_v2(id_list[0]))
 Formula: tempo de compra = tempo restante - 30
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 Iq=IQ_Option("email","password")
 Money=1
 ACTIVES="EURUSD"
@@ -607,7 +607,7 @@ Iq.sell_option(sell_all)#input int or list
 Exemplo
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import time
 print("login...")
 Iq=IQ_Option("email","password")
@@ -690,7 +690,7 @@ Iq.get_all_init()
 Exemplo
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 
 API = IQ_Option("email", "password")
 
@@ -704,7 +704,7 @@ print(API.get_all_init())
 sample
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 print("login...")
 Iq=IQ_Option("email","password")
 d=Iq.get_binary_option_detail()
@@ -717,7 +717,7 @@ print(d["CADCHF"]["binary"])
 sample
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 print("login...")
 Iq=IQ_Option("email","password")
 d=Iq.get_all_profit()
@@ -769,7 +769,7 @@ Se sua conta está logada em outro celular/PC e está realizando operações, vo
 
 ```python
 import time
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 Iq=IQ_Option("email","password")
 while True:
     #please open website iqoption and buy some binary option
@@ -791,12 +791,12 @@ print(Iq.get_option_open_by_other_pc())
 
 ### <a id=digital>For Digital</a>
 
-[Digital options buy with actual price sample code](https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/65#issuecomment-511660908)
+[Digital options buy with actual price sample code](https://github.com/Lu-Yi-Hsun/x8api/issues/65#issuecomment-511660908)
 
 ### Para digitais
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import time
 import random
 Iq=IQ_Option("email","password")
@@ -863,7 +863,7 @@ Formato da informação retornada
 
 Exemplo de uso
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import time
 Iq=IQ_Option("email","password")
 ACTIVES="EURUSD"
@@ -882,7 +882,7 @@ Iq.unsubscribe_strike_list(ACTIVES,duration)
 Abrir operação na digital com preço atual
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 
 Iq=IQ_Option("email","password")
 
@@ -898,7 +898,7 @@ print(Iq.buy_digital_spot(ACTIVES,amount,action,duration))
 ![](image/profit_after_sale.png)
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 Iq=IQ_Option("email","passord")
 ACTIVES="EURUSD"
 duration=1#minute 1 or 5
@@ -920,7 +920,7 @@ while True:
 get current price profit
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import time
 import logging
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
@@ -977,7 +977,7 @@ Iq.check_win_digital_v2(id)#get the id from Iq.buy_digital
 Exemplo
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import logging
 import random
 import time
@@ -1026,7 +1026,7 @@ Iq.close_digital_option(id)
 Utilizando get_digital_position()
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import logging
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
@@ -1074,7 +1074,7 @@ you can search instrument_type and instrument_id from this file
 #### Sample
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 Iq=IQ_Option("email","password")
 
 instrument_type="crypto"
@@ -1284,7 +1284,7 @@ instrument_type="crypto","forex","fx-option","turbo-option","multi-option","cfd"
 get_position_history_v2(instrument_type,limit,offset,start,end)
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import logging
 import random
 import time
@@ -1395,7 +1395,7 @@ Iq.get_candles(ACTIVES,interval,count,endtime)
 try this code to get more than 1000 candle
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import time
 Iq=IQ_Option("email","password")
 end_from_time=time.time()
@@ -1412,7 +1412,7 @@ print(ANS)
 ##### Sample
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import logging
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
@@ -1505,7 +1505,7 @@ while True:
 instrument_type="binary-option"/"digital-option"/"forex"/"cfd"/"crypto"
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import logging
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
@@ -1524,12 +1524,12 @@ Iq.unsubscribe_top_assets_updated(instrument_type)
 
 #### get popularity by top_assets_updated() api
 
-https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/131
+https://github.com/Lu-Yi-Hsun/x8api/issues/131
 
 ![](https://user-images.githubusercontent.com/7738916/66943816-c9ee1380-f000-11e9-996e-e06efba64101.png)
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 import logging
 import time
 import operator
@@ -1580,7 +1580,7 @@ for now... only support get binary option mood , i will implement beterr if need
 Sample
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 Iq=IQ_Option("email","password")
 goal="EURUSD"
 instrument="forex" ## Option "forex", "turbo-option"
@@ -1652,7 +1652,7 @@ Iq.get_balance()
 reset practice balance to \$10000
 
 ```python
-from iqoptionapi.stable_api import IQ_Option
+from x8api.stable_api import IQ_Option
 Iq=IQ_Option("email","password")
 print(Iq.reset_practice_balance())
 ```

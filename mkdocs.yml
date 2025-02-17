@@ -1,7 +1,7 @@
-site_name: iqoptionapi document
-repo_name: "iqoptionapi"
-repo_url: "https://github.com/hnomkeng/iqoption_api_hnk"
-site_url: "https://iqoptionapi.github.io/iqoptionapi/"
+site_name: x8api document
+repo_name: "x8api"
+repo_url: "https://github.com/hnomkeng/x8api"
+site_url: "https://x8api.github.io/x8api/"
 docs_dir: "doc/"
 site_dir: "docs/"
 extra:
@@ -10,7 +10,7 @@ extra:
     #-tokenizer: '[\a\-\.]+'
   social:
     - icon: "fontawesome/brands/github"
-      link: "https://github.com/hnomkeng/iqoption_api_hnk"
+      link: "https://github.com/hnomkeng/x8api"
 
 plugins:
   - search:
@@ -25,7 +25,7 @@ theme:
   logo: "logo.png"
   name: "material" #readthedocs/readthedocs
   custom_dir: doc/theme/material
-  donation_link: "https://streamelements.com/iqoptionapi/tip"
+  donation_link: "https://streamelements.com/x8api/tip"
   icon: assets/images/favicon.png
   palette:
     primary: "indigo"
