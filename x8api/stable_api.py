@@ -83,7 +83,7 @@ class X8_Option:
             self.api.close()
         except:
             pass
-            # logging.error('**warning** self.api.close() fail')
+            logging.error('**warning** self.api.close() fail')
 
         self.api = x8api(
             "8xtrade.com", self.email, self.password)
