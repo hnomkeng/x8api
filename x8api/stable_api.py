@@ -139,15 +139,15 @@ class X8_Option:
             # self.get_balance_id()
             return True, None
         else:
-            # if json.loads(reason)['code'] == 'verify':
-            #     response = self.api.send_sms_code(json.loads(reason)['token'])
+            if json.loads(reason)['code'] == 'verify':
+                response = self.api.send_sms_code(json.loads(reason)['token'])
 
-            #     if response.json()['code'] != 'success':
-            #         return False, response.json()['message']
+                if response.json()['code'] != 'success':
+                    return False, response.json()['message']
 
-            #     # token_sms
-            #     self.resp_sms = response
-            #     return False, "2FA"
+                # token_sms
+                self.resp_sms = response
+                return False, "2FA"
             return False, reason
 
     # self.update_ACTIVES_OPCODE()
